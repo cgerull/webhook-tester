@@ -2,18 +2,23 @@
 var http = require('http');
 const config = require('./config/config');
 var createHandler = require('github-webhook-handler');
-var handler = createHandler({ path: '/webhook', secret: config.secret });
+var handler = createHandler({
+  path: '/webhook',
+  secret: config.secret
+});
 
 var server = http.createServer(function (req, res) {
   handler(req, res, function (err) {
+    console.error('Server error: ' + res.error);
     res.statusCode = 404;
     res.end('no such location');
   })
 }).listen(config.port, () => {
-   console.log('Express server listening on port ' + config.port);
- });
+  console.log('Configured for ' + config.env + 'with secret ' + config.secret);
+  console.log('Express server listening on port ' + config.port);
+});
 
-var close = function() {
+var close = function () {
   server.close();
 }
 handler.on('error', function (err) {
