@@ -14,7 +14,7 @@ var server = http.createServer(function (req, res) {
     res.end('no such location');
   })
 }).listen(config.port, () => {
-  console.log('Configured for ' + config.env + 'with secret ' + config.secret);
+  console.log('Running in ' + process.env.NODE_ENV + ' as ' + config.app.name + ' with secret ' + config.secret);
   console.log('Express server listening on port ' + config.port);
 });
 
