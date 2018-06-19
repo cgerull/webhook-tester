@@ -2,7 +2,7 @@
 var http = require('http');
 const config = require('./config/config');
 var createHandler = require('github-webhook-handler');
-var handler = createHandler({ path: '/webhook', secret: 'myhashsecret' });
+var handler = createHandler({ path: '/webhook', secret: config.secret });
 
 var server = http.createServer(function (req, res) {
   handler(req, res, function (err) {
