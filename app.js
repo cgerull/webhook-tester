@@ -1,6 +1,7 @@
 // Simple echo for GitHub webhook testing
 var http = require('http');
 const config = require('./config/config');
+const util = require('util');
 var createHandler = require('github-webhook-handler');
 var handler = createHandler({
   path: '/webhook',
@@ -8,6 +9,10 @@ var handler = createHandler({
 });
 
 var server = http.createServer(function (req, res) {
+  //console.log('QQQ req: ' + util.inspect(req));
+  //console.log('QQQ res: ' + util.inspect(res));
+
+
   handler(req, res, function (err) {
     console.error('Server error: ' + res.error);
     res.statusCode = 404;
@@ -15,6 +20,7 @@ var server = http.createServer(function (req, res) {
   })
 }).listen(config.port, () => {
   console.log('Running in ' + process.env.NODE_ENV + ' as ' + config.app.name + ' with secret ' + config.secret);
+
   console.log('Express server listening on port ' + config.port);
 });
 
