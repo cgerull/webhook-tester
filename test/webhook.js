@@ -18,7 +18,7 @@ const crypto = require('crypto'),
       'title': 'Testing webhook'
     }
   }, 
-  json = JSON.stringify(obj)
+  json = JSON.stringify(obj);
 
 function signBlob(key, blob) {
   return 'sha1=' +
