@@ -5,7 +5,7 @@ const plumber = require('gulp-plumber');
 const livereload = require('gulp-livereload');
 
 
-gulp.task('develop', () => {
+gulp.task('develop', (done) => {
   process.env.NODE_ENV = 'development'
   livereload.listen();
   nodemon({
@@ -21,14 +21,18 @@ gulp.task('develop', () => {
     this.stdout.pipe(process.stdout);
     this.stderr.pipe(process.stderr);
   });
+  done();
 });
 
-gulp.task('test', () => {
+gulp.task('test', (done) => {
   gulp.src(['test/**/*.js'], {read: false})
 		.pipe(mocha({reporter: 'list', exit: true}))
-		.on('error', console.error)
+		.on('error', console.error);
+  done();
 });
 
-gulp.task('default', [
+gulp.task('default', 
+	gulp.series(
   'develop'
-]);
+  )
+);
