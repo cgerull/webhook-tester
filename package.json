@@ -9,7 +9,7 @@
     "test:coverage": "nyc npm test",
     "test:unit": "mocha --recursive test/middleware test/models test/routes",
     "test:integration": "mocha --recursive test/integration",
-	 "gulp": "./node_modules/gulp/bin/gulp.js"
+    "gulp": "./node_modules/gulp/bin/gulp.js"
   },
   "dependencies": {
     "body-parser": "^1.18.3",
@@ -20,7 +20,7 @@
     "glob": "^6.0.4",
     "jade": "^1.11.0",
     "method-override": "^2.3.0",
-    "morgan": "^1.6.1",
+    "morgan": "^1.9.1",
     "npm": "^6.4.1",
     "serve-favicon": "^2.5.0"
   },
