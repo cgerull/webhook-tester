@@ -5,5 +5,11 @@ node_js:
 install:
   - npm install
 
+addons:
+  sonarcloud:
+    organization: "cgerull-github" # the key of the org you chose
+    token:
+      secure: 4fc7a7e2ef31f0e240bbdbf4f99e2b14bd348686 # encrypted value of your token
+      
 script:
 - npm run test
