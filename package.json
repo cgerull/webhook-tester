@@ -1,14 +1,19 @@
 {
-  "name": "express-app",
-  "version": "0.0.1",
+  "name": "webhook-tester",
+  "version": "1.0.0",
   "private": true,
+  "license": "MIT",
+  "author": "Claus Gerull <cgerull@live.com>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cgerull/webhook-tester"
+  },
   "main": "app.js",
   "scripts": {
     "start": "node app.js",
     "test": "mocha --recursive test",
-    "test:coverage": "nyc npm test",
-    "test:unit": "mocha --recursive test/middleware test/models test/routes",
-    "test:integration": "mocha --recursive test/integration",
+    "coverage": "nyc npm test",
+    "dummy": "echo Dummydummy",
     "gulp": "./node_modules/gulp/bin/gulp.js"
   },
   "dependencies": {
@@ -25,16 +30,16 @@
     "serve-favicon": "^2.5.0"
   },
   "devDependencies": {
-    "chai": "^3.5.0",
-    "chai-http": "^4.2.0",
+    "chai": ">=3.5.0",
+    "chai-http": ">=4.2.0",
     "debug": "^2.2.0",
-    "gulp": "^4.0.0",
-    "gulp-livereload": "^4.0.0",
-    "gulp-mocha": "^6.0.0",
-    "gulp-nodemon": "^2.4.2",
-    "gulp-plumber": "^1.0.0",
-    "mocha": "^4.0.1",
-    "nyc": "^13.1.0",
-    "supertest": "^3.3.0"
+    "gulp": ">=4.0.0",
+    "gulp-livereload": ">=4.0.0",
+    "gulp-mocha": ">=6.0.0",
+    "gulp-nodemon": ">=2.4.2",
+    "gulp-plumber": ">=1.2.1",
+    "mocha": ">=4.0.1",
+    "nyc": ">=13.1.0",
+    "supertest": ">=3.3.0"
   }
 }
