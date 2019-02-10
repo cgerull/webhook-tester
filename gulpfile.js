@@ -1,7 +1,7 @@
 const gulp = require('gulp');
 const mocha = require('gulp-mocha');
 const nodemon = require('gulp-nodemon');
-const plumber = require('gulp-plumber');
+//const plumber = require('gulp-plumber');
 const livereload = require('gulp-livereload');
 
 
