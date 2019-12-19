@@ -20,7 +20,7 @@
     "express": ">=4.13.3",
     "github-webhook-handler": ">=0.7.1",
     "morgan": "^1.9.1",
-    "npm": "^6.10.1",
+    "npm": ">=6.13.4",
     "serve-favicon": "^2.5.0"
   },
   "devDependencies": {
