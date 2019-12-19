@@ -23,13 +23,10 @@ jobs:
 
       - run: npm install
       
-      # Needed for gulp tests
-      - run: npm install -g gulp-cli
-
       - save_cache:
           paths:
             - node_modules
           key: v1-dependencies-{{ checksum "package.json" }}
 
       # run tests!
-      - run: gulp test
+      - run: npm test
