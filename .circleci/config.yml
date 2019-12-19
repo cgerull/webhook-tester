@@ -22,6 +22,9 @@ jobs:
             - v1-dependencies-
 
       - run: npm install
+      
+      # Needed for gulp tests
+      - run: npm install -g gulp-cli
 
       - save_cache:
           paths:
@@ -29,4 +32,4 @@ jobs:
           key: v1-dependencies-{{ checksum "package.json" }}
 
       # run tests!
-      - run: gulp verify
+      - run: gulp test
