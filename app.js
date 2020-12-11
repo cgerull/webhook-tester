@@ -11,16 +11,14 @@ var handler = createHandler({
 var server = http.createServer(function (req, res) {
   //console.log('QQQ req: ' + util.inspect(req));
   //console.log('QQQ res: ' + util.inspect(res));
-
-
   handler(req, res, function (err) {
     console.error('Server error: ' + res.error);
     res.statusCode = 404;
-    res.end('no such location');
+    res.statusMessage = 'no such location';
+    // res.end('no such location');
   });
 }).listen(config.port, () => {
   console.log('Running in ' + process.env.NODE_ENV + ' as ' + config.app.name + ' with secret ' + config.secret);
-
   console.log('Express server listening on port ' + config.port);
 });
 
