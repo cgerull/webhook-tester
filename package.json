@@ -31,7 +31,7 @@
     "gulp-livereload": "^4.0.2",
     "gulp-mocha": "^7.0.2",
     "gulp-nodemon": "^2.5.0",
-    "minimist": ">=0.2.1",
+    "minimist": ">=1.2.6",
     "mocha": "^6.2.3"
   }
 }
