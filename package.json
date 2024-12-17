@@ -32,6 +32,6 @@
     "gulp-mocha": "^10.0.1",
     "gulp-nodemon": "^2.5.0",
     "minimist": "^1.2.8",
-    "mocha": "^10.8.2"
+    "mocha": "^11.0.1"
   }
 }
