@@ -24,7 +24,7 @@
     "serve-favicon": "^2.5.1"
   },
   "devDependencies": {
-    "chai": "^5.2.0",
+    "chai": "^5.2.1",
     "chai-http": "^5.1.2",
     "debug": "^4.4.0",
     "gulp": "^5.0.1",
